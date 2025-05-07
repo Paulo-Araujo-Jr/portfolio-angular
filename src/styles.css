@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    scroll-behavior: smooth;
+  }
+  /* styles.css (ou styles.scss) - arquivo global na raiz da pasta src/ */
+:root {
+  --navbar-height: 70px; /* Defina a mesma altura da sua navbar */
+}
+
+body {
+  padding-top: var(--navbar-height); /* Espaço para a navbar fixa */
+}
+
+section {
+  scroll-margin-top: var(--navbar-height); /* Ajuste para âncoras */
+}
