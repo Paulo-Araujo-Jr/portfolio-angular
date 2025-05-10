@@ -35,7 +35,6 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(45deg,
-  var(--color-primary-dark) 1%,
   var(--color-primary) 49%, 
   var(--color-secondary), 
   var(--color-light)) ;
@@ -61,12 +60,6 @@ button:hover, .btn:hover {
   box-shadow: var(--shadow-md);
 }
 
-/* Links */
-a {
-  color: var(--color-primary);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
 
 a:hover {
   color: var(--color-hover);
