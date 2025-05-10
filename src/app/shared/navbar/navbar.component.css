@@ -3,7 +3,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: linear-gradient(90deg, #2c3e50, #3498db, #a5b1c2, #d1d8e0);
+    background: linear-gradient(90deg,
+    var(--color-primary-dark), 
+    var(--color-primary), 
+    var(--color-secondary), 
+    var(--color-light));
     color: white;
     position: fixed;
     top: 0;
@@ -44,7 +48,7 @@
   }
   
   .nav-links li a {
-    color: rgb(43, 43, 43);
+    color: var(--color-text-dark);
     text-decoration: none;
     font-weight: 500;
     position: relative;
@@ -52,7 +56,7 @@
   }
   
   .nav-links li a:hover {
-    color: #ecf0f1;
+    color: var(--color-text-light);
   }
   
   .nav-links li a::after {
@@ -62,7 +66,7 @@
     left: 0;
     height: 2px;
     width: 0;
-    background-color: #ecf0f1;
+    background-color: var(--color-text-light);
     transition: width 0.3s ease;
   }
   
@@ -112,7 +116,11 @@
       left: 0;
       right: 0;
       max-height: 0;
-      background: linear-gradient(135deg, #2c3e50, #3498db, #a5b1c2);
+      background: linear-gradient(45deg, 
+      var(--color-primary-dark), 
+      var(--color-primary), 
+      var(--color-secondary) 80%, 
+      var(--color-light) 120%);
       gap: 0;
       align-items: center;
       padding: 0;

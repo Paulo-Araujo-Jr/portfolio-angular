@@ -1,15 +1,73 @@
-html {
-    scroll-behavior: smooth;
-  }
-  /* styles.css (ou styles.scss) - arquivo global na raiz da pasta src/ */
 :root {
-  --navbar-height: 70px; /* Defina a mesma altura da sua navbar */
+  /* Cores base do gradiente (navbar) */
+  --color-primary-dark: #2c3e50;
+  --color-primary: #3498db;
+  --color-secondary: #a5b1c2;
+  --color-light: #d1d8e0;
+  
+  /* Cores derivadas */
+  --color-text-dark: #2c3e50;
+  --color-text-medium: #34495e;
+  --color-text-light: #ecf0f1;
+  
+  /* Cores de interação */
+  --color-hover: #2980b9;
+  --color-active: #1abc9c;
+  --color-error: #e74c3c;
+  --color-success: #2ecc71;
+  
+  /* Tons neutros */
+  --color-white: #ffffff;
+  --color-off-white: #f8f9fa;
+  --color-gray-light: #e9ecef;
+  --color-gray-medium: #ced4da;
+  --color-gray-dark: #adb5bd;
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+  --section-bg: rgba(255, 255, 255, 0.226);
+
 }
 
 body {
-  padding-top: var(--navbar-height); /* Espaço para a navbar fixa */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(45deg,
+  var(--color-primary-dark) 1%,
+  var(--color-primary) 49%, 
+  var(--color-secondary), 
+  var(--color-light)) ;
+  color: var(--color-text-medium);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  padding-top: 70px;
 }
 
+/* Estilos para seções */
 section {
-  scroll-margin-top: var(--navbar-height); /* Ajuste para âncoras */
+  padding: 4rem 2rem;
+  background: var(--section-bg);
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+button:hover, .btn:hover {
+  background-color: var(--color-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-hover);
 }

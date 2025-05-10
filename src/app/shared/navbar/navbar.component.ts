@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +8,20 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   menuOpen = false;
-  avatar =  "../assets/avatar.jpeg";
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+
+  const target = event.target as HTMLElement;
+  const navLinks = document.querySelector('.nav-links');
+  const hamburger = document.querySelector('.hamburger');
+  
+  if (this.menuOpen && 
+      !navLinks?.contains(target) && 
+      !hamburger?.contains(target)) {
+    this.closeMenu();
+  }
+}
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
